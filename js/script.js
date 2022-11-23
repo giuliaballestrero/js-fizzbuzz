@@ -7,34 +7,49 @@ Per i numeri che sono sia multipli di 3 che di 5 stampi “FizzBuzz”.
  */
 
 
-// definisco dove inserire l'elemento da aggiungere nel DOM
-const numberboxElement = document.getElementById('number-box');
+// definisco dove inserire gli elementi da aggiungere nel DOM
+const doubleNumberElement = document.getElementById('number-5-3');
+const numberThreeElement = document.getElementById('number-3');
+const numberFiveElement = document.getElementById('number-5');
 
 //stampo in console i numeri da 1 a 100
 for (let index = 1; index < 101; index++) {
 console.log(index);
 
 //assegno l'elemento da inserire nel DOM
-numberboxElement.innerHTML += `
-<div class="numbers">
-    <h2>
-        ${index}
-    </h2>
-</div>`
+
 
 //verifico quali numeri sono divisibili sia per 5 che per 3
 if ( (index % 3) === 0 && (index % 5) === 0 ) {
-   console.log ('FizzBuzz'); 
+   console.log ('FizzBuzz');
+   doubleNumberElement.innerHTML += `
+<div class="numbers">
+    <p>
+        ${index}
+    </p>
+</div>` 
 }
 
 //verifico  quali numeri sono divisibili per 3
     else if (index % 3 === 0) {
         console.log('Fizz');
+        numberThreeElement.innerHTML += `
+        <div class="numbers">
+            <p>
+                ${index}
+            </p>
+        </div>`
     }
     
 //verifico quali numeri sono divisibili per 5
         else if (index % 5 === 0) {
            console.log('Buzz'); 
+           numberFiveElement.innerHTML += `
+           <div class="numbers">
+               <p>
+                   ${index}
+               </p>
+           </div>`
         }      
 }
 
