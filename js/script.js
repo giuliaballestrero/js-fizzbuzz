@@ -12,17 +12,16 @@ Per i numeri che sono sia multipli di 3 che di 5 stampi “FizzBuzz”.
 for (let index = 1; index < 101; index++) {
     console.log(index);
 
-//verifico quali numeri sono divisibili per 5
- if (index % 3 === 0)
-    console.log('Fizz');
+//verifico quali numeri sono divisibili sia per 5 che per 3
+if ( (index % 3) === 0 && (index % 5) === 0 )
+console.log ('FizzBuzz');
 
 //verifico  quali numeri sono divisibili per 3
-    else if (index % 5 === 0)
-    console.log('Buzz');
+    else if (index % 3 === 0)
+    console.log('Fizz');
 
-//verifico quali numeri sono divisibili sia per 5 che per 3
-        else if ( (index % 3) === 0 && (index % 5) === 0 )
-        console.log (FizzBuzz);
-
+//verifico quali numeri sono divisibili per 5
+        else if (index % 5 === 0)
+        console.log('Buzz');
 }
 
