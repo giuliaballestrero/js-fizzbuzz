@@ -16,16 +16,13 @@ const numberFiveElement = document.getElementById('number-5');
 for (let index = 1; index < 101; index++) {
 console.log(index);
 
-//assegno l'elemento da inserire nel DOM
-
-
 //verifico quali numeri sono divisibili sia per 5 che per 3
 if ( (index % 3) === 0 && (index % 5) === 0 ) {
    console.log ('FizzBuzz');
    doubleNumberElement.innerHTML += `
-<div class="numbers">
+<div class="green">
     <p>
-        ${index}
+        ${index} FizzBuzz
     </p>
 </div>` 
 }
@@ -34,9 +31,9 @@ if ( (index % 3) === 0 && (index % 5) === 0 ) {
     else if (index % 3 === 0) {
         console.log('Fizz');
         numberThreeElement.innerHTML += `
-        <div class="numbers">
+        <div class="blue">
             <p>
-                ${index}
+                ${index} Fizz
             </p>
         </div>`
     }
@@ -45,9 +42,9 @@ if ( (index % 3) === 0 && (index % 5) === 0 ) {
         else if (index % 5 === 0) {
            console.log('Buzz'); 
            numberFiveElement.innerHTML += `
-           <div class="numbers">
+           <div class="red">
                <p>
-                   ${index}
+                   ${index} Buzz
                </p>
            </div>`
         }      
